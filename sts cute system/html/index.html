@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect - Telemedicine Education Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthConnect</span>
+            </div>
+            <div class="nav-links">
+                <button onclick="showPage('home')" class="active" id="nav-home">Home</button>
+                <button onclick="showPage('about')" id="nav-about">About</button>
+                <button onclick="showPage('articles')" id="nav-articles">Articles</button>
+                <button onclick="showPage('quiz')" id="nav-quiz">Quiz</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" id="menu-icon"></i>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <button onclick="showPage('home'); toggleMobileMenu()">Home</button>
+            <button onclick="showPage('about'); toggleMobileMenu()">About</button>
+            <button onclick="showPage('articles'); toggleMobileMenu()">Articles</button>
+            <button onclick="showPage('quiz'); toggleMobileMenu()">Quiz</button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>HealthConnect</h1>
+                    <p style="font-size: 1.5rem; margin-bottom: 1rem;">Bridging Healthcare Through Technology</p>
+                    <p>Discover how telemedicine is transforming healthcare delivery in the Philippines, making quality medical care accessible to everyone, everywhere.</p>
+                    <button class="btn-primary" onclick="showPage('about')">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <div class="grid grid-2">
+                <div class="card benefits-card">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Benefits of Telemedicine</h3>
+                    <ul>
+                        <li><span style="color: #10b981;">•</span> Increased healthcare access in rural and remote areas</li>
+                        <li><span style="color: #10b981;">•</span> Reduced travel time and costs for patients</li>
+                        <li><span style="color: #10b981;">•</span> Continuity of care during emergencies and pandemics</li>
+                        <li><span style="color: #10b981;">•</span> Access to specialist consultations nationwide</li>
+                        <li><span style="color: #10b981;">•</span> Improved chronic disease management through remote monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="card challenges-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Challenges & Concerns</h3>
+                    <ul>
+                        <li><span style="color: #f59e0b;">•</span> Digital divide and limited internet connectivity in rural areas</li>
+                        <li><span style="color: #f59e0b;">•</span> Low digital literacy among certain populations</li>
+                        <li><span style="color: #f59e0b;">•</span> Data privacy and cybersecurity concerns</li>
+                        <li><span style="color: #f59e0b;">•</span> Limitations of physical examination in virtual consultations</li>
+                        <li><span style="color: #f59e0b;">•</span> Need for robust regulatory frameworks and quality standards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="card">
+                <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #1f2937;">Telemedicine Services</h2>
+                <div class="grid grid-4">
+                    <div class="service-card" style="background: #dbeafe;">
+                        <div class="service-icon" style="color: #2563eb;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4 style="font-weight: 600; color: #1f2937;">Teleconsultation</h4>
+                        <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.5rem;">Virtual doctor visits via video or phone</p>
+                    </div>
+                    <div class="service-card" style="background: #e9d5ff;">
+                        <div class="service-icon" style="color: #7c3aed;">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4 style="font-weight: 600; color: #1f2937;">Remote Monitoring</h4>
+                        <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.5rem;">Track vital signs and health data remotely</p>
+                    </div>
+                    <div class="service-card" style="background: #d1fae5;">
+                        <div class="service-icon" style="color: #059669;">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h4 style="font-weight: 600; color: #1f2937;">E-Prescription</h4>
+                        <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.5rem;">Digital prescription system for accuracy</p>
+                    </div>
+                    <div class="service-card" style="background: #fee2e2;">
+                        <div class="service-icon" style="color: #dc2626;">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4 style="font-weight: 600; color: #1f2937;">Appointment Booking</h4>
+                        <p style="font-size: 0.875rem; color: #4b5563; margin-top: 0.5rem;">Schedule consultations online easily</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="page">
+            <div class="card">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937;">About HealthConnect</h2>
+                <p style="color: #374151; line-height: 1.7; margin-bottom: 1rem;">
+                    HealthConnect is an educational platform dedicated to exploring telemedicine adoption and implementation in the Philippines. Our mission is to provide comprehensive, evidence-based information about how telecommunications technology is transforming healthcare delivery across the archipelago.
+                </p>
+                <p style="color: #374151; line-height: 1.7;">
+                    The Philippines faces unique healthcare challenges, including geographic barriers across 7,641 islands, shortage of healthcare professionals in rural areas, and unequal distribution of medical facilities. Telemedicine offers promising solutions to these challenges while presenting new considerations around technology access, data privacy, and quality of care.
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="mission-card blue-card">
+                    <div style="color: #2563eb; font-size: 2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Our Mission</h3>
+                    <p style="color: #374151;">
+                        To educate stakeholders about telemedicine opportunities and challenges, promoting informed decision-making in healthcare technology adoption.
+                    </p>
+                </div>
+                <div class="mission-card green-card">
+                    <div style="color: #059669; font-size: 2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Who We Serve</h3>
+                    <p style="color: #374151;">
+                        Healthcare providers, patients, policymakers, students, and anyone interested in understanding the future of healthcare delivery in the Philippines.
+                    </p>
+                </div>
+                <div class="mission-card purple-card">
+                    <div style="color: #7c3aed; font-size: 2rem; margin-bottom: 1rem;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Our Approach</h3>
+                    <p style="color: #374151;">
+                        Evidence-based, balanced presentation of information drawing from research, policy documents, and real-world implementation experiences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="context-section">
+                <h3>The Philippine Context</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 1rem;">Key Milestones</h4>
+                        <ul style="list-style: none; color: #bfdbfe;">
+                            <li style="margin-bottom: 0.5rem;">• 2020: DOH issues comprehensive telemedicine guidelines</li>
+                            <li style="margin-bottom: 0.5rem;">• 2021: PhilHealth includes teleconsultation in benefit packages</li>
+                            <li style="margin-bottom: 0.5rem;">• 2022: Data Privacy Commission issues telehealth guidelines</li>
+                            <li>• 2023-2025: Rapid expansion of telemedicine services</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 1rem;">Current Initiatives</h4>
+                        <ul style="list-style: none; color: #bfdbfe;">
+                            <li style="margin-bottom: 0.5rem;">• Universal Health Care integration with digital health</li>
+                            <li style="margin-bottom: 0.5rem;">• Konsulta Package with teleconsultation services</li>
+                            <li style="margin-bottom: 0.5rem;">• Rural health unit digitalization programs</li>
+                            <li>• Public-private partnerships for platform development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="articles" class="page">
+            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #1f2937;">Featured Articles</h2>
+            
+            <article class="article">
+                <h3 style="color: #1d4ed8;">The Digital Health Revolution in Philippine Healthcare</h3>
+                <p>The COVID-19 pandemic accelerated telemedicine adoption across the Philippines, transforming how healthcare is delivered. From major hospitals in Metro Manila to rural health units in remote provinces, healthcare providers rapidly implemented teleconsultation services to maintain care continuity while minimizing infection risks.</p>
+                <p>The Department of Health's 2020 telemedicine guidelines established the legal and ethical framework for remote healthcare delivery, addressing concerns about medical practice standards, patient safety, and data privacy. PhilHealth's subsequent inclusion of teleconsultation benefits legitimized virtual care as a reimbursable service, encouraging both provider adoption and patient utilization.</p>
+                <p>Today, telemedicine is transitioning from emergency measure to standard practice, with platforms offering video consultations, e-prescriptions, remote monitoring, and digital health records integrated into the broader Universal Health Care system.</p>
+            </article>
+
+            <article class="article">
+                <h3 style="color: #047857;">Bridging the Geographic Divide: Telemedicine in Rural Communities</h3>
+                <p>For residents of remote islands and mountainous regions, accessing healthcare often means traveling hours or even days to reach the nearest hospital. Telemedicine offers a transformative solution, connecting rural health units with specialist physicians in urban centers through video consultations and digital health tools.</p>
+                <p>Success stories emerge from provinces like Palawan and Sulu, where telemedicine programs have enabled rural health workers to receive real-time guidance from specialists for complex cases. Patients with chronic conditions like diabetes and hypertension can now receive regular monitoring without the burden of costly and time-consuming travel.</p>
+                <p>However, challenges remain. Limited internet connectivity, inconsistent electricity supply, and low digital literacy among both healthcare workers and patients require sustained investment in infrastructure, training, and community education to realize telemedicine's full potential in underserved areas.</p>
+            </article>
+
+            <article class="article">
+                <h3 style="color: #7c3aed;">Data Privacy and Cybersecurity in Philippine Telemedicine</h3>
+                <p>As healthcare moves online, protecting patient data becomes paramount. The Philippines Data Privacy Act of 2012 establishes strict requirements for handling personal health information, while the Data Privacy Commission has issued specific guidelines for telehealth service providers.</p>
+                <p>Telemedicine platforms must implement robust security measures including end-to-end encryption, secure data storage, access controls, and audit trails. Healthcare providers need training on digital security practices, while patients should understand their rights regarding health data privacy and how their information is protected.</p>
+                <p>Recent data breaches in various sectors highlight the ongoing cybersecurity challenges. The healthcare industry must prioritize security investments, regular vulnerability assessments, and compliance monitoring to maintain patient trust and meet regulatory requirements in the digital health era.</p>
+            </article>
+
+            <article class="article">
+                <h3 style="color: #dc2626;">Remote Patient Monitoring: Managing Chronic Diseases from Home</h3>
+                <p>Remote patient monitoring represents one of telemedicine's most promising applications, particularly for managing chronic conditions like diabetes, hypertension, and heart disease. Patients use connected devices to measure vital signs, blood glucose levels, and other health metrics that automatically transmit to their healthcare providers.</p>
+                <p>Studies show that RPM programs improve patient engagement, medication adherence, and clinical outcomes while reducing hospital readmissions. For Filipino patients, particularly those in remote areas or with mobility limitations, RPM eliminates the need for frequent clinic visits while maintaining continuous care oversight.</p>
+                <p>Implementation challenges include device costs, patient training requirements, and integration with existing electronic health record systems. However, as technology becomes more affordable and user-friendly, RPM is increasingly recognized as an essential component of comprehensive chronic disease management.</p>
+            </article>
+
+            <article class="article">
+                <h3 style="color: #ea580c;">The Future of Healthcare: Integrating Telemedicine with Traditional Care</h3>
+                <p>The future of healthcare lies not in replacing traditional care with telemedicine, but in creating integrated hybrid models that leverage the strengths of both approaches. Routine follow-ups, medication management, and chronic disease monitoring can often be handled effectively through virtual consultations, reserving in-person visits for situations requiring physical examination or procedures.</p>
+                <p>Healthcare systems are developing triage protocols to determine which cases are appropriate for telemedicine versus in-person care. Artificial intelligence and decision support tools help guide these determinations, while maintaining human oversight and clinical judgment.</p>
+                <p>As the Philippines moves toward Universal Health Care, telemedicine integration becomes crucial for achieving coverage goals. Digital health technologies can extend healthcare reach, improve efficiency, and enhance patient experience when thoughtfully implemented as part of a comprehensive care delivery strategy.</p>
+            </article>
+
+            <article class="article">
+                <h3 style="color: #0891b2;">Overcoming the Digital Divide: Ensuring Equitable Telemedicine Access</h3>
+                <p>While telemedicine promises improved healthcare access, it risks creating new inequities if digital divide issues remain unaddressed. Rural communities, elderly populations, low-income families, and people with disabilities face multiple barriers including limited internet connectivity, lack of devices, low digital literacy, and platform accessibility challenges.</p>
+                <p>Addressing these inequities requires multi-faceted approaches including infrastructure investments in broadband connectivity, device subsidy programs, digital literacy training tailored to different populations, and platform designs that accommodate various accessibility needs. Community health workers can serve as digital navigators, helping patients access and utilize telemedicine services.</p>
+                <p>Policymakers must ensure that telemedicine expansion does not leave vulnerable populations behind. This includes maintaining traditional care access, providing alternative connectivity solutions, and continuously monitoring and addressing equity gaps as digital health technologies evolve.</p>
+            </article>
+        </div>
+
+        <div id="quiz" class="page">
+            <div class="card" style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937;">Test Your Knowledge</h2>
+                <p style="color: #4b5563; margin-bottom: 2rem;">How much do you know about telemedicine in the Philippines? Take this quiz to find out!</p>
+
+                <div id="quiz-questions"></div>
+
+                <button id="submit-btn" class="btn-submit" onclick="submitQuiz()">Submit Quiz</button>
+                <div id="quiz-result" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>HealthConnect</h3>
+                <p style="color: #d1d5db;">Empowering informed decisions about telemedicine and digital healthcare in the Philippines.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>DOH Telemedicine Guidelines</li>
+                    <li>PhilHealth Teleconsultation Benefits</li>
+                    <li>Data Privacy Commission</li>
+                    <li>Universal Health Care Act</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Project Information</h4>
+                <p style="color: #d1d5db; font-size: 0.875rem;">
+                    PHINMA ST. Jude College
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
